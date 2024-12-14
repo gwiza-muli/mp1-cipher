@@ -1,10 +1,4 @@
 package edu.grinnell.csc207;
-// Sheilla Muligande
-// Course: CSC207-01
-// Instructor: Sam Rebelsky
-// Date:9/14/2024
-// File: Cipher.java
-
 import java.io.PrintWriter;
 import edu.grinnell.csc207.util.CipherUtils;
 
