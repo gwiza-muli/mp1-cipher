@@ -4,7 +4,7 @@ package edu.grinnell.csc207.util;
  * An implementation of different Ciphers from course CSC207-01.
  *
  * @author Sheilla Muligande
- * 
+ *
  */
 public class CipherUtils {
 
