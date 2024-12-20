@@ -29,7 +29,7 @@ public class Cipher {
     System.out.println("Cipher: " + cipher);
     System.out.println("Word: " + word);
     System.out.println("Key: " + key);
-    
+
     if (args.length != EXPECTED_NUM_PARAMS) {
       System.err.println("Error: Invalid number of parameters. Expected 4 parameters, received "
           + args.length);
@@ -54,25 +54,21 @@ public class Cipher {
             } // else
           } // if
         } else {
-          if (!(CipherUtils.alphaNumericChecker(currArg))) {
-            System.err.println("Error: string must be a lowercase letter.");
-            return;
-          } else if (word.isEmpty()) {
+          if (word.isEmpty()) {
             word = currArg;
           } else if (key.isEmpty()) {
-            if (cipher.equals("caesar") || cipher.equals("vigenere")) {
-              if (!currArg.isEmpty()) {
-                key = currArg;
-              } else {
+                key = currArg;}
+               else {
                 System.err.println("Error: Empty keys are not permitted");
                 return;
               } // if
-            } else {
-              key = currArg;
-            } // else
-          } // else if
-        } // if
-      } // for
+            } //else 
+          } // for
+
+          if(action.isEmpty() | cipher.isEmpty() || word.isEmpty() || key.isEmpty()){
+            System.err.println("missing arguments");
+            return;
+          }
       if (cipher.equals("caesar") && ((key.length() == 1))) {
         if (action.equals("encode")) {
           System.out.print(CipherUtils.caesarEncrypt(word, key.charAt(0)));
