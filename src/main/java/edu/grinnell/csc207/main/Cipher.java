@@ -1,4 +1,4 @@
-package edu.grinnell.csc207;
+package edu.grinnell.csc207.main;
 import java.io.PrintWriter;
 import edu.grinnell.csc207.util.CipherUtils;
 
@@ -26,7 +26,7 @@ public class Cipher {
     String cipher = "";
     String word = "";
     if (args.length != EXPECTED_NUM_PARAMS) {
-      System.err.println("Error: Invalid number of parameters. Please enter 4 parameters.");
+      System.err.println("Error: Invalid number of parameters. Expected 4 parameters, received " + args.length);
       return;
     } else {
       for (int i = 0; i < args.length; i++) {
