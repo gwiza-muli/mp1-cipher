@@ -24,6 +24,12 @@ public class Cipher {
     String key = "";
     String cipher = "";
     String word = "";
+
+    System.out.println("Action: " + action);
+    System.out.println("Cipher: " + cipher);
+    System.out.println("Word: " + word);
+    System.out.println("Key: " + key);
+    
     if (args.length != EXPECTED_NUM_PARAMS) {
       System.err.println("Error: Invalid number of parameters. Expected 4 parameters, received "
           + args.length);
@@ -70,8 +76,10 @@ public class Cipher {
       if (cipher.equals("caesar") && ((key.length() == 1))) {
         if (action.equals("encode")) {
           System.out.print(CipherUtils.caesarEncrypt(word, key.charAt(0)));
+          System.out.flush();
         } else if (action.equals("decode")) {
           System.out.print(CipherUtils.caesarDecrypt(word, key.charAt(0)));
+          System.out.flush();
         } else {
           System.err.println("No valid action specified."
               + "Legal values are '-encode' and '-decode'");
@@ -83,8 +91,10 @@ public class Cipher {
       if (cipher.equals("vigenere")) {
         if (action.equals("encode")) {
           System.out.print(CipherUtils.vigenereEncrypt(word, key));
+          System.out.flush();
         } else if (action.equals("decode")) {
           System.out.print(CipherUtils.vigenereDecrypt(word, key));
+          System.out.flush();
         } else {
           System.err.println("No valid action specified."
               + "Legal values are '-encode' and '-decode'");
