@@ -2,4 +2,6 @@ Name: Sheilla Muligande
 
 Changes: I correctly set up the repository so now it works.
 
+Second Changes: I moved AllCaesar and Cipher to main.
+
 GITHUB LINK: https://github.com/gwiza-muli/mp1-cipher.git
